@@ -1,0 +1,127 @@
+Echo: $ echo [OPTIONS] [STRING...]
+Description: Displays the given strings or variables. Works similarly to the print command in other programming languages.
+
+Clear: clear
+Description: Clears the terminal screen, removing all previous output.
+
+Exit: exit [STATUS]
+Description: Exits the current shell session with an optional status code.
+
+Date: $ date [OPTIONS]
+Description: Displays the current date, month, day, and time. Options can be used to format the output.
+
+Time: $ time [COMMAND]
+Description: Measures the time statistics of running a specific command.
+
+Uptime: uptime [OPTIONS]
+Description: Displays system uptime, current time, number of users logged in, and system load averages for the past 1, 5, and 15 minutes.
+
+Cal: $ cal [OPTIONS] [MONTH] [YEAR]
+Description: Displays a calendar. Options can be used to show the entire year or a specific month of a year.
+
+Cat: cat [OPTIONS] [FILE...]
+Description: Concatenates files and prints them to the standard output. Can also be used to create, display, or concatenate files.
+
+Tty: tty [OPTIONS]
+Description: Prints the file name of the terminal connected to standard input. Options allow for silent output or displaying version information.
+
+Man: man [OPTIONS] [COMMAND]
+Description: Displays the user manual for a specified command. Provides detailed information including command syntax, options, examples, and more.
+
+ls: 
+Function: Lists directory contents.
+Format: ls [OPTIONS] [FILE]
+Explanation: The ls command is used to list directory contents. It can display various information about the files and directories within a specified directory. Options can be used to modify the output format and content.
+
+History: 
+Function: Displays previously executed commands.
+Format: history
+Explanation: The history command shows a list of previously executed commands in the current shell session. It's useful for recalling and repeating commands, as well as analyzing command usage patterns.
+
+id: 
+Function: Displays user and group information.
+Format: id [OPTIONS] [USER]
+Explanation: The id command provides information about the current user or a specified user, including user name, user ID (UID), group memberships, and group IDs (GIDs). Options can be used to customize the output format.
+
+pwd: 
+Function: Prints the current working directory.
+Format: pwd
+Explanation: The pwd command prints the full pathname of the current working directory. It's useful for verifying the current directory location within the file system.
+
+whoami: 
+Function: Displays the current username.
+Format: whoami
+Explanation: The whoami command simply displays the username of the current user. It's useful for quickly identifying the current user within a shell session.
+
+ping: 
+Function: Tests network connectivity.
+Format: ping [OPTIONS] HOST
+Explanation: The ping command is used to test network connectivity by sending ICMP echo requests to a specified host. It's useful for checking if a host is reachable and measuring network latency.
+
+ifconfig: 
+Function: Configures network interfaces.
+Format: ifconfig [INTERFACE] [OPTIONS]
+Explanation: The ifconfig command is used to configure network interfaces on a system. It can display information about active interfaces, set IP addresses, configure network parameters, and more. Options can be used to customize its behavior.
+
+mail: 
+Function: Sends emails from the command line.
+Format: mail [OPTIONS] [RECIPIENT]
+Explanation: The mail command allows users to send emails from the command line. It's useful for sending emails programmatically or from shell scripts. Options can be used to specify email recipients, subject, and message content.
+
+pr Command:
+Syntax: pr [options] [filename]
+Explanation:
+The pr command is used in Linux/Unix to prepare a file for printing.
+It adds suitable footers, headers, and formats the text for printing.
+By default, it adds 5 lines of margin both at the top and bottom of the page.
+The header includes the date and time of the last modification of the file, the file name, and the page number.
+
+lp Command:
+Syntax: lp [options] [filename]
+Explanation:
+The lp command stands for 'Line printer' in Linux.
+It allows printing files through the terminal without needing to manage settings through a GUI.
+It's part of the Common Unix Printing System (CUPS), enabling the system to act as a print server.
+Options include:
+  -d: Print using a specific printer.
+  -n: Print multiple copies of the document.
+  -q: Set the priority of the printer in the queue.
+  -t: Assign a name to the job.
+  -o: Assign one or more job options.
+  -i: Modify an existing job.
+  -m: Notify the recipient when the job is completed.
+  -h: Specify the hostname of the server.
+  -E: Force encryption when connecting to the server.
+
+lpr Command:
+Syntax: lpr [options] [filename]
+Explanation:
+The lpr command submits files for printing.
+Files named on the command line are sent to the specified printer (or the system default destination if no destination is specified).
+If no files are listed, lpr reads the print file from the standard input.
+
+lpstat Command:
+Syntax: lpstat [options]
+Explanation:
+The lpstat command displays status information about current classes, jobs, and printers.
+When run with no arguments, it lists jobs queued by the current user.
+
+lpq Command:
+Syntax: lpq [options]
+Explanation:
+The lpq command shows the current print queue status on the named printer.
+Jobs queued on the default destination are shown if no printer or class is specified.
+The +interval option allows continuous reporting of jobs in the queue until it's empty.
+
+lprm Command:
+Syntax: lprm [options] [job ID]
+Explanation:
+The lprm command removes jobs from the line printer spooling queue.
+It can be used to remove specific job IDs from the queue.
+
+cancel Command:
+Syntax: cancel [options] [job ID]
+Explanation:
+The cancel command cancels existing print jobs.
+The -a option removes all jobs from the specified destination.
+

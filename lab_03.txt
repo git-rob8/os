@@ -1,0 +1,141 @@
+File and Directory Management
+
+`ls`
+- Lists files in a directory.
+  - `ls`: Lists files in the current directory.
+  - `ls -a`: Lists all files, including hidden ones.
+  - `ls -la`: Lists files with details like permissions, owners, and sizes.
+
+`cd`
+- Changes the current directory.
+  - `cd myfiles`: Moves to the subdirectory "myfiles".
+  - `cd /home/dvader/empire_docs`: Moves to "/home/dvader/empire_docs".
+  - `cd ..`: Moves to the parent directory.
+  - `cd /`: Moves to the root directory.
+  - `cd`: Returns to the home directory.
+
+`pwd`
+- Prints the current directory path.
+
+`mkdir`
+- Creates a new directory.
+  - `mkdir mystuff`: Creates "mystuff" in the current directory.
+  - `mkdir /tmp/morestuff`: Creates "morestuff" in "/tmp".
+
+`rmdir`
+- Removes an empty directory.
+  - `rmdir oldstuff`: Removes "oldstuff" if it's empty.
+
+`rm`
+- Removes a file or directory.
+  - `rm -i junk`: Removes "junk" with confirmation.
+  - `rm -rf oldstuff`: Removes "oldstuff" and its contents without confirmation.
+
+`cp`
+- Copies a file.
+  - `cp -i oldfile newfile`: Copies "oldfile" to "newfile" with confirmation.
+  - `cp -i /home/dvader/notes/meeting1 .`: Copies "meeting1" from another directory to the current directory.
+
+`mv`
+- Moves or renames a file.
+  - `mv -i oldname newname`: Renames "oldname" to "newname" with confirmation.
+  - `mv -i newhw/hw1 oldhw`: Moves "hw1" from "newhw" to "oldhw".
+
+File Content Viewing and Manipulation
+
+`cat`
+- Displays file content.
+  - `cat myfile`: Displays "myfile".
+  - `cat file1 >> file2`: Appends "file1" to "file2".
+
+`less`
+- Allows scrolling through long outputs.
+  - `ls -la | less`: Uses `less` to view a long directory listing.
+
+`wc`
+- Displays statistics of a file.
+  - `wc wonderland.txt`: Shows lines, words, and characters in "wonderland.txt".
+
+Text Manipulation and Processing
+
+`cut`
+- Extracts specific columns from a file.
+  - `cut -d " " -f 2- marks1.txt`: Extracts columns from "marks1.txt".
+
+`paste`
+- Merges lines from multiple files.
+  - `paste -d " " students.txt m_tmp.txt`: Merges "students.txt" and "m_tmp.txt".
+
+`grep`
+- Searches for specific patterns in files.
+  - `grep pattern filename`: Searches for "pattern" in "filename".
+
+`tr`
+- Translates or deletes characters.
+  - `tr 'a' 'b' < input.txt`: Replaces 'a' with 'b' in "input.txt".
+
+`sort`
+- Sorts lines in a file.
+  - `sort file.txt`: Sorts lines in "file.txt".
+
+`head` and `tail`
+- Displays the beginning or end of a file.
+  - `head file.txt`: Shows the first 10 lines of "file.txt".
+  - `tail file.txt`: Shows the last 10 lines of "file.txt".
+
+File and Text Comparison
+
+`diff`
+- Compares two files.
+  - `diff file1 file2`: Shows differences between "file1" and "file2".
+
+`comm`
+- Compares two sorted files.
+  - `comm file1 file2`: Shows lines unique to "file1", "file2", or common to both.
+
+`cmp`
+- Compares two files byte by byte.
+  - `cmp file1 file2`: Checks if "file1" and "file2" are identical.
+
+Compression and Archiving
+
+`tar`
+- Archives and extracts files.
+  - `tar -cvf archive.tar files`: Creates a tar archive of "files".
+  - `tar -xvf archive.tar`: Extracts "archive.tar".
+
+`gzip` and `bzip2`
+- Compresses and decompresses files.
+  - `gzip file.txt`: Compresses "file.txt" into "file.txt.gz".
+  - `gzip -d file.txt.gz`: Decompresses "file.txt.gz".
+
+`unzip`
+- Extracts zip archives.
+  - `unzip archive.zip`: Extracts "archive.zip".
+
+Searching and Locating Files
+
+`find`
+- Searches for files in a directory hierarchy.
+  - `find /path -name filename`: Searches for "filename" in "/path".
+
+`locate`
+- Searches for files quickly using a database.
+  - `locate filename`: Searches for "filename".
+
+Text Editors
+
+`vim`
+- A text editor.
+  - `vim filename`: Opens "filename" in vim for editing.
+
+Miscellaneous
+
+`echo`
+- Prints arguments to the terminal.
+  - `echo "Hello, World!"`: Prints "Hello, World!".
+
+`type`
+- Displays information about a command type.
+  - `type command`: Shows the type of "command".
+

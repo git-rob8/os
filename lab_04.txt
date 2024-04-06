@@ -1,0 +1,87 @@
+User and Session Information
+
+`who`
+Description: The `who` command displays information about currently logged-in users. It shows the username, terminal name, login time, and other details.
+Usage: `who`
+
+`whoami`
+Description: The `whoami` command prints the username associated with the current effective user ID. This is useful for identifying the current user in a shell or within shell scripts.
+Usage: `whoami`
+
+`su`
+Description: The `su` command allows users to switch to another user account, often to gain elevated privileges like the root user. It stands for "substitute user".
+Usage: `su [username]`
+
+`sudo`
+Description: The `sudo` command enables permitted users to run a command as another user, typically the superuser. It checks the `/etc/sudoers` file for permissions and requires the user's password for verification.
+Usage: `sudo [command]`
+
+`login`
+Description: The `login` command is used to start a new session on a system. It prompts for a username and password unless specified, allowing users to log in or switch between user accounts.
+Usage: `login [username]`
+
+`logout`
+Description: The `logout` command terminates the current session and logs out the user immediately.
+Usage: `logout`
+
+`exit`
+Description: The `exit` command closes the current shell or terminal session. It can also return an exit status if specified.
+Usage: `exit [N]`
+
+User Account Management
+
+`passwd`
+Description: The `passwd` command is used to change the password for a user account. The root user can change any user's password, while regular users can only change their own.
+Usage: `passwd [username]`
+
+`useradd/adduser`
+Description: The `useradd` and `adduser` commands are used to create new user accounts on a Linux system. While `useradd` is a native binary, `adduser` is a Perl script that utilizes `useradd` in the background.
+Usage: `useradd [options] username` or `adduser [options] username`
+
+`usermod`
+Description: The `usermod` command modifies user account attributes such as the username, home directory, login shell, and more.
+Usage: `usermod [options] username`
+
+`userdel`
+Description: The `userdel` command deletes a user account from the system, removing all associated files and entries from system account files.
+Usage: `userdel [options] username`
+
+Group Management
+
+`groupadd`
+Description: The `groupadd` command creates a new group account on the system with the specified name and default attributes.
+Usage: `groupadd [options] groupname`
+
+`groupmod`
+Description: The `groupmod` command modifies group attributes such as the group name or group ID.
+Usage: `groupmod [options] groupname`
+
+`groupdel`
+Description: The `groupdel` command deletes an existing group, removing all references to the group from system files.
+Usage: `groupdel [options] groupname`
+
+`gpasswd`
+Description: The `gpasswd` command is used to administer group passwords and membership, allowing for the addition and removal of group members and administrators.
+Usage: `gpasswd [options] groupname`
+
+Ownership and Permissions
+
+`chown`
+Description: The `chown` command changes the ownership of a file or directory, allowing you to set a new user and/or group as the owner.
+Usage: `chown [options] user:group file`
+
+`chgrp`
+Description: The `chgrp` command changes the group ownership of a file or directory to the specified group.
+Usage: `chgrp [options] groupname file`
+
+`chage`
+Description: The `chage` command manages password aging information for user accounts, including expiry dates and password change intervals.
+Usage: `chage [options] username`
+
+User Details Modification
+
+`chfn`
+Description: The `chfn` command allows you to change the finger information stored in the `/etc/passwd` file for a user, such as the full name, room number, and phone number.
+Usage: `chfn [username]`
+
+

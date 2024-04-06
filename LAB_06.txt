@@ -1,0 +1,62 @@
+Memory and System Information
+
+`free`
+Description: The `free` command displays the amount of free and used memory (both physical and swap), as well as the buffers used by the kernel. It provides a snapshot of the system's memory usage.
+Usage: `free [options]`
+Example: `free -h` (displays output in human-readable format)
+
+`/proc/meminfo`
+Description: The `/proc/meminfo` file is a pseudo-file in the `/proc` filesystem that provides detailed information about the system's memory usage, including physical and swap memory, shared memory, and kernel buffers.
+Usage: `cat /proc/meminfo`
+
+Process Monitoring
+
+`top`
+Description: The `top` command is a basic Unix utility for monitoring system processes and resource utilization. It displays a dynamic, real-time view of system performance, showing CPU usage, memory usage, and more.
+Usage: `top`
+
+`htop`
+Description: The `htop` command is an interactive process viewer and system monitor. It offers a more user-friendly and feature-rich alternative to `top`, with color-coded output, mouse support, and the ability to scroll vertically and horizontally.
+Installation: `sudo apt install htop`
+Usage: `htop`
+
+Disk Usage
+
+`df`
+Description: The `df` command (disk free) displays the amount of available disk space on mounted filesystems, showing total, used, and available space.
+Usage: `df [options]`
+
+`du`
+Description: The `du` command (disk usage) provides disk usage information for directories and files. It allows users to determine the space consumed by specific directories or files.
+Usage: `du [options] [directory/file]`
+
+System Performance Monitoring
+
+`vmstat`
+Description: The `vmstat` command provides valuable insights into system performance by displaying statistics about processes, memory, paging, block IO, disk, and CPU scheduling.
+Usage: `vmstat [options] [delay] [count]`
+
+`dmidecode`
+Description: The `dmidecode` command retrieves detailed hardware information from the system's DMI (Desktop Management Interface) table, including processor, RAM, BIOS, and more.
+Usage: `dmidecode [options]`
+
+System Activity Reporting
+
+`sar`
+Description: The `sar` command (System Activity Report) is a Unix System V-derived tool used to collect, report, and analyze system activity data, including CPU activity, memory usage, interrupts, device load, network, and swap space utilization.
+Installation: 
+  ```
+  sudo apt install sysstat
+  sudo service sysstat start
+  sudo nano /etc/default/sysstat  # Change ENABLED="false" to ENABLED="true"
+  sudo service sysstat restart
+  ```
+Usage: `sar [options]`
+
+Page Size
+
+`pagesize`
+Description: The `pagesize` command displays the size of a memory page in bytes, providing information about the system's memory management and allocation.
+Usage: `pagesize`
+Alternative: `getconf PAGESIZE` or `getconf PAGE_SIZE`
+
