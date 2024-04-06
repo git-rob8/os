@@ -1,0 +1,29 @@
+Text Searching and Filtering
+
+`grep`
+Description: The `grep` command stands for "global search for regular expression and print". It searches for a specified pattern (regular expression) within one or more files and displays the lines containing the pattern.
+Usage: `grep [options] pattern [file...]`
+Example: `grep "pattern" file.txt`
+
+`egrep`
+Description: The `egrep` command is an extended version of `grep` that supports more complex regular expressions. It treats the pattern as an extended regular expression (ERE) and prints lines that match the pattern, along with the filenames if multiple files are searched.
+Usage: `egrep [options] pattern [file...]`
+Equivalent: `grep -E [options] pattern [file...]`
+Example: `egrep "pattern1|pattern2" file.txt`
+
+Text Editing and Transformation
+
+`sed`
+Description: The `sed` command (stream editor) is a powerful text processing tool that performs editing operations on text streams, such as file contents or output from other commands. It can search for patterns, perform substitutions, insert or delete lines, and more, without requiring the file to be opened in an editor.
+Usage: `sed [options] 'command' file`
+Common Commands:
+  `s/pattern/replacement/`: Substitute pattern with replacement.
+  `d`: Delete lines matching a pattern.
+  `i`: Insert text before a line.
+  `a`: Append text after a line.
+Example: 
+  ```bash
+  sed 's/pattern/replacement/' file.txt
+  sed '/pattern/d' file.txt
+  sed '2i\\New line' file.txt
+  ```
