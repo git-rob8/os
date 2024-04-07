@@ -57,29 +57,31 @@ File Content Viewing and Manipulation
   - `wc wonderland.txt`: Shows lines, words, and characters in "wonderland.txt".
 
 Text Manipulation and Processing
-
-`cut`
-- Extracts specific columns from a file.
-  - `cut -d " " -f 2- marks1.txt`: Extracts columns from "marks1.txt".
-
-`paste`
-- Merges lines from multiple files.
-  - `paste -d " " students.txt m_tmp.txt`: Merges "students.txt" and "m_tmp.txt".
+Example: 
+create a file using cat command like `cat > unix.txt` and fill the content below as :
+unix is great os. unix is opensource. unix  is free os.
+Unix Linux which one you use.
+uNix is easy to learn. unix is multiuser os. unisx is a powerful.
 
 `grep`
 - Searches for specific patterns in files.
   - `grep pattern filename`: Searches for "pattern" in "filename".
+Example: 
+grep -i "UNix" unix.txt
+grep -c "UNix" unix.txt
 
 `tr`
 - Translates or deletes characters.
   - `tr 'a' 'b' < input.txt`: Replaces 'a' with 'b' in "input.txt".
+Example:
+cat unix.txt | tr "[a-z]" "[A-Z]"
 
 `sort`
 - Sorts lines in a file.
-  - `sort file.txt`: Sorts lines in "file.txt".
+  - `sort file.txt`: Sorts lines in "file.txt". (to execute this command, generate file having minimum 5 lines usually names)
 
 `head` and `tail`
-- Displays the beginning or end of a file.
+- Displays the beginning or end of a file. (to execute this command, generate file having minimum 15 lines usually names)
   - `head file.txt`: Shows the first 10 lines of "file.txt".
   - `tail file.txt`: Shows the last 10 lines of "file.txt".
 
