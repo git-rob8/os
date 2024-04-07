@@ -1,15 +1,50 @@
 Text Searching and Filtering
+Example: 
+cat > first.txt
+This is unix lab.
+we are studying unix system.
+unix has kernel.
 
 `grep`
 Description: The `grep` command stands for "global search for regular expression and print". It searches for a specified pattern (regular expression) within one or more files and displays the lines containing the pattern.
 Usage: `grep [options] pattern [file...]`
-Example: `grep "pattern" file.txt`
+`grep "pattern" file.txt`
+Example: 
+grep "unix" first.txt
+grep -w "unix" first.txt
+grep "uni" first.txt
+grep -n "unix" first.txt
+grep -n "is" first.txt
+grep -c "unix" first.txt
+grep -i "unix" first.txt
+grep -v "unix" first.txt
+grep -v "system" first.txt
+grep "unix" *.txt
+grep -l "unix" *.txt
+grep -e "unix" -e "kernel" first.txt
+grep -e "is" -e "studying" first.txt
+grep -vi "unix" first.txt
+grep -vi "kernel" first.txt
+grep -cv "unix" first.txt
+grep -cv "kernel" first.txt
 
 `egrep`
 Description: The `egrep` command is an extended version of `grep` that supports more complex regular expressions. It treats the pattern as an extended regular expression (ERE) and prints lines that match the pattern, along with the filenames if multiple files are searched.
 Usage: `egrep [options] pattern [file...]`
 Equivalent: `grep -E [options] pattern [file...]`
-Example: `egrep "pattern1|pattern2" file.txt`
+`egrep "pattern1|pattern2" file.txt`
+Example: 
+egrep -w "unix" first.txt
+egrep "uni" first.txt
+egrep -n "unix" first.txt
+egrep -c "unix" first.txt
+egrep -i "unix" first.txt
+egrep -v "unix" first.txt
+egrep "unix" *.txt
+egrep -l "unix" *.txt
+egrep -e "unix" -e "kernel" first.txt
+egrep -vi "kernel" first.txt
+egrep -cv "kernel" first.txt
 
 Text Editing and Transformation
 
@@ -27,3 +62,12 @@ Example:
   sed '/pattern/d' file.txt
   sed '2i\\New line' file.txt
   ```
+
+SED EXAMPLES:
+cat > second.txt
+Arsenal is the great football club.
+Arsenal were invincibles.
+Arsenal won their last title in 2004.
+
+sed 's/Arsenal/Chelsea/' second.txt
+sed 's/Arsenal/Chelsea/p' second.txt
