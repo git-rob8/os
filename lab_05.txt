@@ -1,12 +1,16 @@
+USE COMMANDS WITH ONLY EXAMPLE AS THEY WORK IN TERMINAL
+
 Process Management
 
 `ps`
 Description: The `ps` command stands for "Process Status" and is used to display information about the currently running processes on a Linux system. It shows the process ID (PID), terminal associated with the process, CPU and memory usage, and more.
 Usage: `ps [options]`
+Exammple: ps
 
 `pstree`
 Description: The `pstree` command displays running processes in a tree-like format, showing the hierarchy of parent-child relationships between processes. It offers a more visual and organized way to view process information.
 Usage: `pstree [options]`
+Exammple: pstree
 
 `nice`
 Description: The `nice` command modifies the scheduling priority of a process, allowing users to adjust the CPU time allocated to a process. A higher priority value gives the process more CPU time.
@@ -15,6 +19,10 @@ Usage: `nice [options] command`
 `kill`
 Description: The `kill` command is used to terminate processes by sending signals to them. The default signal is `SIGTERM`, but other signals like `SIGKILL` can also be specified to forcefully terminate a process.
 Usage: `kill [signal] PID`
+Example: 
+ps
+kill -SIGTERM <PID of bash>
+kill -SIGKILL <PID of bash>
 
 `pkill`
 Description: The `pkill` command sends signals to processes based on specific criteria such as process name, user, or other attributes, allowing for the selective termination of processes.
@@ -33,17 +41,31 @@ Job Control
 `fg`
 Description: The `fg` command brings a background process to the foreground in the current shell session, allowing you to interact with it directly.
 Usage: `fg [job_spec]`
+Example: 
+ping www.google.com
+'ctrl+z' to stop
+jobs -l
+fg %1
 
 `bg`
 Description: The `bg` command resumes suspended jobs by running them in the background, freeing up the terminal for other tasks while the job continues to execute.
 Usage: `bg [job_spec]`
+Example: 
+ping www.google.com
+'ctrl+z' to stop
+bg %1
 
 `pgrep`
 Description: The `pgrep` command searches for processes based on specified criteria such as process name or attributes. It is commonly used in combination with `pkill` to select processes for termination.
 Usage: `pgrep [options] pattern`
+Example:
+ps -f
+pgrep ps -f
 
 Process Scheduling
 
 `renice`
 Description: The `renice` command allows users to change the scheduling priority of a running process. It can increase or decrease the priority value, affecting the CPU time allocated to the process.
 Usage: `renice [options] priority PID`
+Example:
+sudo renice -14 2002
