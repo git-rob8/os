@@ -51,37 +51,53 @@ Group Management
 `groupadd`
 Description: The `groupadd` command creates a new group account on the system with the specified name and default attributes.
 Usage: `groupadd [options] groupname`
+Example:
+sudo groupadd name
+sudo tail /etc/group
 
 `groupmod`
 Description: The `groupmod` command modifies group attributes such as the group name or group ID.
 Usage: `groupmod [options] groupname`
+Example:
+sudo groupadd -g 420 name
+sudo tail /etc/group
 
 `groupdel`
 Description: The `groupdel` command deletes an existing group, removing all references to the group from system files.
 Usage: `groupdel [options] groupname`
+Example:
+sudo groupdel akatsuki
+sudo tail /etc/group
 
 `gpasswd`
 Description: The `gpasswd` command is used to administer group passwords and membership, allowing for the addition and removal of group members and administrators.
 Usage: `gpasswd [options] groupname`
+Example:
+sudo gpasswd -a itachi akatsuki
+sudo tail /etc/group
 
 Ownership and Permissions
 
 `chown`
 Description: The `chown` command changes the ownership of a file or directory, allowing you to set a new user and/or group as the owner.
 Usage: `chown [options] user:group file`
+Example:
+sudo chown itachi abc.txt
 
 `chgrp`
 Description: The `chgrp` command changes the group ownership of a file or directory to the specified group.
 Usage: `chgrp [options] groupname file`
+Example:
+sudo chgrp akatsuki abc.txt
 
 `chage`
 Description: The `chage` command manages password aging information for user accounts, including expiry dates and password change intervals.
 Usage: `chage [options] username`
+Example:
+sudo chage -l root
 
 User Details Modification
 
 `chfn`
 Description: The `chfn` command allows you to change the finger information stored in the `/etc/passwd` file for a user, such as the full name, room number, and phone number.
 Usage: `chfn [username]`
-
-
